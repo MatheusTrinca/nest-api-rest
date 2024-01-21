@@ -1,14 +1,14 @@
 GET http://localhost:3000/products
 
 ###
-GET http://localhost:3000/products/1
+GET http://localhost:3000/products/133
 
 ###
 POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-  "name": "Product 1",
+  "name": "Product 3",
   "price": 100
 }
 
@@ -17,9 +17,19 @@ PATCH http://localhost:3000/products/1
 Content-Type: application/json
 
 {
-  "name": "Product 1 changed",
-  "price": 150
+  "name": "Product 1",
+  "price": 100
 }
 
 ###
-DELETE http://localhost:3000/products/2
+DELETE http://localhost:3000/products/3
+
+###
+POST http://localhost:3000/stock-inputs
+Content-Type: application/json
+
+ {
+   "productId": 1,
+   "quantity": 1,
+   "date": "2023-01-01"
+ }
